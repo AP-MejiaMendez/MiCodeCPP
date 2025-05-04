@@ -20,11 +20,11 @@ GitHub es una plataforma online de desarrollo colaborativo que utiliza Git, un s
 ##
 #### Comandos para Configurar el Usuario y las Credenciales
 | No. | Comando                                                | Descripción |
-|:---:|:-------------------------------------------------------|:-----------|
-| 1   | **git config --global user.name "Tu Nombre"**           | Configura el nombre de usuario global para Git. |
-| 2   | **git config --global user.email ""** | Configura el correo electrónico global para Git. |
-| 3   | **git config user.name "Tu Nombre"**                   | Configura el nombre de usuario local para un proyecto específico. |
-| 4   | **git config user.email ""**       | Configura el correo electrónico local para un proyecto específico. |
+|:---:|:-------------------------------------------------------|:------------|
+| 1   | **git config --global user.name ""**                    | Configura el nombre de usuario global para Git. |
+| 2   | **git config --global user.email ""**                   | Configura el correo electrónico global para Git. |
+| 3   | **git config user.name ""**                             | Configura el nombre de usuario local para un proyecto específico. |
+| 4   | **git config user.email ""**                            | Configura el correo electrónico local para un proyecto específico. |
 | 5   | **git config --global --unset user.name**               | Elimina la configuración global del nombre de usuario. |
 | 6   | **git config --global --unset user.email**              | Elimina la configuración global del correo electrónico. |
 | 7   | **git config --unset user.name**                        | Elimina la configuración local del nombre de usuario. |
