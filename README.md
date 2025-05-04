@@ -4,7 +4,7 @@ Este repositorio está dedicado a almacenar y organizar todos los conocimientos 
 ## 😸 GitHub y Git
 GitHub es una plataforma online de desarrollo colaborativo que utiliza Git, un sistema de control de versiones, para permitir a los desarrolladores almacenar, compartir y colaborar en proyectos de software.
 
-<u><h3 align="center">Comandos de Git</h3></u>
+<h3 style="text-align:center; text-decoration:underline;">Comandos de Git</h3>
 
 #### Comandos Básicos
 | Comando      | Descripción |
