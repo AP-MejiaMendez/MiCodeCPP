@@ -19,9 +19,11 @@
 using namespace std;
 int main()
 {
+    // Declaración de variables
     int Salary = 0, SalaryWDesc = 0, Option = 0;
     double ISSS, AFP, Renta;
     string Message;
+    // Mensaje de contexto al usuario
     cout << "Welcome!\n----------\nTo the program who calculates Taxes\nPlease, enter your salary: ";
     cin >> Salary;
     cout << "\nNow, what do you want to calculate?\n";
@@ -30,10 +32,11 @@ int main()
     cout << "\n| 2. AFP    |";
     cout << "\n| 3. Renta  |";
     cout << "\n| 4. Total  |";
-    cout << "\n| 5. Salir  |";
+    cout << "\n| 5. Exit   |";
     cout << "\n------------------------\n";
     cin >> Option;
 
+    // Validación de salarios negativos
     if (Salary <= 0)
     {
         cout << "Your salary can not be 0 or below";
@@ -44,6 +47,7 @@ int main()
         {
         case 1:
             // Descuento del ISS 3% con tope máximo de 30$ Hasta $1000
+            // Condcional de cuanto se aplica de ISS
             if (Salary > 1000)
             {
                 ISSS = 30;
@@ -52,11 +56,13 @@ int main()
             {
                 ISSS = (Salary * 0.03);
             }
+            // El salario total con el descuento
             SalaryWDesc = Salary - ISSS;
             Message = "Salary: " + to_string(Salary) + "\nISSS: " + to_string(ISSS) + "\nDiscount: " + to_string(SalaryWDesc);
             break;
         case 2:
             // Descuento del AFP  7.25% del salario
+            // Calculo del AFP
             AFP = (Salary * 0.0725);
             SalaryWDesc = Salary - AFP;
             Message = "Salary: " + to_string(Salary) + "\nAFP: " + to_string(AFP) + "\nDiscount: " + to_string(SalaryWDesc);
@@ -79,24 +85,26 @@ int main()
             }
             else
             {
+                // Calculo de la renta
                 if (SalaryWDesc >= 472.01 || SalaryWDesc <= 895.24)
                 {
-                    Renta =(SalaryWDesc * 0.10);
+                    Renta = (SalaryWDesc * 0.10);
                 }
                 else if (SalaryWDesc >= 895.25 || SalaryWDesc <= 2038.10)
                 {
-                    Renta =(SalaryWDesc * 0.20);
+                    Renta = (SalaryWDesc * 0.20);
                 }
                 else
                 {
                     Renta = (SalaryWDesc * 0.30);
                 }
+                // Salario total
                 SalaryWDesc = SalaryWDesc - Renta;
             }
             Message = "Salary: " + to_string(Salary) + "\nRenta: " + to_string(Renta) + "\nDiscount: " + to_string(SalaryWDesc);
             break;
         case 4:
-            // Descuento de renta
+            // Output de todo
             if (Salary > 1000)
             {
                 ISSS = 30;
@@ -123,14 +131,14 @@ int main()
                 }
                 else
                 {
-                    Renta =(SalaryWDesc * 0.30);
+                    Renta = (SalaryWDesc * 0.30);
                 }
                 SalaryWDesc = SalaryWDesc - Renta;
             }
             Message = "Salary: " + to_string(Salary) + "\nISSS: " + to_string(ISSS) + "\nAFP: " + to_string(AFP) + "\nRenta: " + to_string(Renta) +
                       "\n Discount: " + to_string(SalaryWDesc);
             break;
-            case 5:
+        case 5:
             return 0;
             break;
         default:
