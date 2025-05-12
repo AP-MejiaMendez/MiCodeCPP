@@ -10,7 +10,8 @@ using namespace std;
 int main()
 {
     int a = 0, b = 0, c = 0;
-    cout << "Ingrese 3 números y le diremos cuales si y cuales no, son divisibles por el tercero" << endl;
+    bool AisDiviByC = false, BisDiviByC = false;
+    cout << "Ingrese 3 numeros y le diremos cuales si y cuales no, son divisibles por el tercero" << endl;
 
     cout << endl;
 
@@ -21,26 +22,32 @@ int main()
     cout << "Tercer numero: ";
     cin >> c;
 
-    bool AisDiviByC = false, BisDiviByC = false;
+    cout << endl;
 
-    AisDiviByC = (a % c == 0);
-    BisDiviByC = (b % c == 0);
-
-    if (AisDiviByC && BisDiviByC)
+    if (c == 0)
     {
-        cout << a << " Y " << b << " Son divisibles entre " << c << endl;
-    }
-    else if (AisDiviByC)
-    {
-        cout << a << "Es el unico divisibles entre " << c << endl;
-    }
-    else if (BisDiviByC)
-    {
-        cout << b << "Es el unico divisibles entre " << c << endl;
+        cout << "ERROR: No se puede dividir entre 0";
     }
     else
     {
-        cout << "Ni " << a << " y " << b << " Son divisibles entre " << c << endl;
+        AisDiviByC = (a % c == 0);
+        BisDiviByC = (b % c == 0);
+        if (AisDiviByC && BisDiviByC)
+        {
+            cout << a << " Y " << b << " Son divisibles entre " << c << endl;
+        }
+        else if (AisDiviByC)
+        {
+            cout << a << " Es el unico divisibles entre " << c << endl;
+        }
+        else if (BisDiviByC)
+        {
+            cout << b << " Es el unico divisibles entre " << c << endl;
+        }
+        else
+        {
+            cout << "Ni " << a << " y " << b << " Son divisibles entre " << c << endl;
+        }
     }
 
     return 0;
