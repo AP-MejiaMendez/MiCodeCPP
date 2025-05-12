@@ -16,6 +16,8 @@ GitHub es una plataforma online de desarrollo colaborativo que utiliza Git, un s
 | 5   | **git status**                                     | Muestra el estado de los archivos en el repositorio. |
 | 6   | **git log**                                        | Muestra el historial de commits realizados en el repositorio. |
 | 7   | **git remote add origin <url>**                    | Conecta tu repositorio local a un repositorio remoto. |
+| 8   |  **git clone <URL>**                               | Clona un repositorio
+
 ##
 ##
 #### Comandos para Configurar el Usuario y las Credenciales
