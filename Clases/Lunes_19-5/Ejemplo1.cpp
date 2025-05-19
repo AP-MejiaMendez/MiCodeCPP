@@ -9,9 +9,9 @@ int main()
     cout << "Contendo del arreglo" << endl;
 
     // Recorre el arreglo
-    for (int i = 0; i <= 5; i++)
+    for (int i = 0; i >= 0; i++)
     {
-        cout << "Elemento en la posición: " << i << " : " << numeros[i];
+        cout << "Elemento en la posicion: " << i << " : " << numeros[i];
     }
     return 0;
 }
