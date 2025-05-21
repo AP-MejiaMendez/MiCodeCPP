@@ -10,11 +10,13 @@ int main()
 {
     // Declaración de variables
     bool esta = false;
-    int nValor = 0;
     int nPregunta = 0;
     int arregloNumeros[5] = {};
 
+    // Mensaje de contexto al usuario
     cout << "Bienvenido, ingrese 5 numeros: " << endl;
+
+    // Bucle para interar en las posiciones del arreglo y guardar lo que el usuario digite en esa posición hasta llegar al limite del arreglo
     for (int i = 0; i < 5; i++)
     {
         cout << "Numero " << i + 1 << ": ";
@@ -24,6 +26,7 @@ int main()
     cout << "Ahora, busque un numero: ";
     cin >> nPregunta;
 
+    // Bucle para interar en las posiciones del arreglo e ir comparando si el digito que ingreso esta en el arreglo
     for (int i = 0; i < 5; i++)
     {
         if (nPregunta == arregloNumeros[i])
@@ -31,6 +34,8 @@ int main()
             esta = true;
         }
     }
+
+    // Condicional, si esta en el arreglo entonces muestra su respectivo mensaje
     if (esta)
     {
         cout << "Si, el numero: " << nPregunta << " Si esta";
